@@ -44,3 +44,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+ion-label {
+  height: 16px;
+}
+</style>

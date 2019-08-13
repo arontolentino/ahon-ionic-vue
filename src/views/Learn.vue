@@ -25,7 +25,7 @@
           <p>Learn the most common ways your thoughts can be distorted</p>
         </ion-text>
       </div>
-      <div class="learn-conent--list">
+      <div class="learn-content--list">
         <ion-card>
           <ion-card-header>
             <ion-card-title>All or Nothing Thinking</ion-card-title>
