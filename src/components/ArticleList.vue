@@ -6,11 +6,11 @@
         <p>Learn the basics of CBT and how to use Ahon</p>
       </ion-text>
     </div>
-    <div class="ArticleList__item">
+    <div class="ArticleList__item" v-for="article in articles" :key="article.id">
       <ion-card>
         <ion-card-header>
-          <ion-card-title>How to use Ahon</ion-card-title>
-          <ion-card-subtitle>8 min read</ion-card-subtitle>
+          <ion-card-title>{{ article.title}}</ion-card-title>
+          <ion-card-subtitle>{{ article.category }}</ion-card-subtitle>
         </ion-card-header>
         <img src="./../assets/shapes.svg" alt />
       </ion-card>
@@ -112,10 +112,25 @@
 </template>
 
 <script>
+import db from './../firebase/init';
 export default {
   name: 'ArticleList',
   data: function() {
-    return {};
+    return {
+      articles: []
+    };
+  },
+  methods: {},
+  created() {
+    db.collection('articles')
+      .get()
+      .then(snapshot => {
+        snapshot.forEach(doc => {
+          let article = doc.data();
+          article.id = doc.id;
+          this.articles.push(article);
+        });
+      });
   }
 };
 </script>
