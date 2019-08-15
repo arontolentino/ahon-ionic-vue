@@ -1,0 +1,7 @@
+{
+  "appId": "app.ahon",
+  "appName": "ahon",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist"
+}

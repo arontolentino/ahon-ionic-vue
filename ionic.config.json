@@ -1,5 +1,8 @@
 {
   "name": "ahon-ionic-vue",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "vue"
 }
